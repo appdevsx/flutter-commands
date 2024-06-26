@@ -1,28 +1,22 @@
 flutter pub run change_app_package_name:main  com.appdevs.qrpay 
 
-
-APP NAME CHANGE 
 flutter pub add rename_app 
 flutter pub run rename_app:main all= “QRPAY”
 
 
-LAUNCHER ICON 
 flutter pub get
 flutter pub run flutter_launcher_icons
 
 
-
 flutter packages pub run build_runner build
-
 flutter pub run flutter_app_name
 
 
 flutter build apk --split-per-abi  --no-tree-shake-icons  
 
 
- cd lib/backend/services/
-
-sed -i '' 's/ mainDomain = "[^"]*";/ mainDomain = "qrpayment.co.uk";/' api_endpoint.dart
+cd lib/backend/services/
+sed -i '' 's/ mainDomain = "[^"]*";/ mainDomain = "qrpay.appdevs.net";/' api_endpoint.dart
 
 
 flutter pub run flutter_app_name
